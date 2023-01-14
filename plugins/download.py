@@ -117,9 +117,7 @@ def ytdl_dowload(url, opts):
         with YoutubeDL(opts) as ytdl:
             ytdl.cache.remove()
             ytdl_data = ytdl.extract_info(url)
-    except Exception as e:
-        is_downloading = False
-        print(e)
+    
 
 
 @Client.on_message(filters.regex(pattern=".*http.* (.*)"))
@@ -242,10 +240,7 @@ async def uloader(client, message):
         loop = get_running_loop()
         await loop.run_in_executor(None, partial(ytdl_dowload, url, opts))
         filename = sorted(get_lst_of_files(out_folder, []))
-    except Exception as e:
-        is_downloading = False
-        return await msg.edit("Error: " + e)
-
+   
     c_time = time.time()
     try:
         await msg.edit("`Uploading.`")
@@ -354,7 +349,7 @@ async def pyro_fsub(c, message, fsub):
                 [[InlineKeyboardButton("Join Now", url="https://t.me/harp_tech")]]
             ),
         )
-        return False
+        return True
     except Exception as kk:
         print(kk)
         await c.send_message(
