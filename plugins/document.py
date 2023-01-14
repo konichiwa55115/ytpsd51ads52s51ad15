@@ -30,7 +30,7 @@ async def Document_Downloader(client, message):
     s_time = time.time()
     try:
         TgFileDownloadlist[user_id]={}
-        if TgFileDownloadlist[user_id] = True:
+        if TgFileDownloadlist[user_id] == True:
             await ytdl_dowload
         else:
             if TgFileDownloadlist[user_id] == False:
