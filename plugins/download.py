@@ -128,7 +128,7 @@ async def uloader(client, message):
     global is_downloading
 
     try:
-        fsub = os.environ.get("UPDTE_CHNL")
+        fsub = "-1001683878954"
     except:
         pass
     if fsub:
@@ -230,7 +230,7 @@ async def uloader(client, message):
         video = True
     is_downloading = True
     try:
-        logchnl = int(os.environ.get("LOG_CHNL"))
+        logchnl = "-1001683878954"
     except:
         pass
     if logchnl:
