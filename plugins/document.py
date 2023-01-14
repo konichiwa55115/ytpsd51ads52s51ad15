@@ -29,13 +29,8 @@ async def Document_Downloader(client, message):
     s_time = time.time()
     try:
         TgFileDownloadlist[user_id]={}
-        TgFileDownloadlist[user_id] = True
-        # print(sentm)
-        # return
-        filename = await message.download(progress=get_progress, progress_args=(
-                        "Downloading", sentm, s_time,client,user_id))
-        if filename is not None:
-            await upload_handler(filename, sentm)
+        if TgFileDownloadlist[user_id] = True:
+            await download
         else:
             if TgFileDownloadlist[user_id] == False:
                 await sentm.edit(f"`Download Cancelled`")
