@@ -5,6 +5,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
+TgFileDownloadlist = {}
+
 
 import pyrogram, os
 
@@ -15,7 +17,6 @@ if __name__ == "__main__":
         bot_token=os.environ.get("TOKEN"),
         api_id=int(os.environ.get("APP_ID")),
         api_hash=os.environ.get("API_HASH"),
-        TgFileDownloadlist = {},
         plugins=plugins,
     )
     app.run()
