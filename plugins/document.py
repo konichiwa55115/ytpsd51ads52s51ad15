@@ -7,6 +7,7 @@ from bot import LOGGER , TgFileDownloadlist
 from pyrogram import Client, filters,StopPropagation
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import FloodWait
+from plugins.download import ytdl_dowload
 
 
 
@@ -30,7 +31,7 @@ async def Document_Downloader(client, message):
     try:
         TgFileDownloadlist[user_id]={}
         if TgFileDownloadlist[user_id] = True:
-            await download
+            await ytdl_dowload
         else:
             if TgFileDownloadlist[user_id] == False:
                 await sentm.edit(f"`Download Cancelled`")
@@ -53,15 +54,3 @@ async def Document_Downloader(client, message):
 
             
 
-
-
-async def extrastuffs(client,message):
-    # channel check
-    if not await inChannel(client ,message):
-        await sendJoinmsg(message)
-        raise StopPropagation
-
-    # Auth check
-    if not token_make(client, message):
-        await message.reply_text("You havn't authenticated me. Use /login to authorize me.")
-        raise StopPropagation
