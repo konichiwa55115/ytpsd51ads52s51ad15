@@ -1,4 +1,4 @@
-from bot.util.progress_pyro import get_progress
+from plugins.progress_pyro import get_progress
 import time
 import asyncio
 from bot import LOGGER , TgFileDownloadlist
