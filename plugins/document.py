@@ -8,10 +8,6 @@ from pyrogram import Client, filters,StopPropagation
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import FloodWait
 
-from bot.drivefunc.Tokenverify import token_make
-from bot.util.check_channel import inChannel
-from bot.util.send_join import sendJoinmsg
-from bot.uploadHandler.upload import upload_handler
 
 
 @Client.on_message(filters.media)
